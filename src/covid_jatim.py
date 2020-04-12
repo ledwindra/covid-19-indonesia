@@ -1,5 +1,4 @@
 import json
-import os
 import re
 import requests
 import pandas as pd
@@ -54,9 +53,7 @@ def main():
         except AttributeError:
             pass
 
-    if os.path.exists('./data/covid-jatim.csv'):
-        return df.to_csv('./data/covid-jatim.csv', index=False, mode='a', header=False)
-    return df.to_csv('./data/covid-jatim.csv', index=False, mode='a')
+    return df.to_csv('./data/covid-jatim.csv', index=False)
 
 if __name__ == '__main__':
     main()
