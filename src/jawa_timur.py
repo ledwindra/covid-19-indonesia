@@ -42,7 +42,6 @@ def main():
     df = pd.DataFrame(jatim.get_kabupaten_data())
     df['id'] = df.astype({'id': 'int32'})
     df = df.sort_values(by='id')
-    df['date_partition'] = datetime.now().strftime('%Y%m%d')
     df = df.drop(columns=['latitude', 'longitude', 'label_lat', 'label_lon'])
     to_decimal = lambda x: float(x.replace(',', '.'))
     lat_lon = ['lat', 'lon', 'lat1', 'lon1', 'lat2', 'lon2', 'lat3', 'lon3']
