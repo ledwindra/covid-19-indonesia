@@ -1,3 +1,4 @@
+git pull origin master
 jupyter nbconvert index.ipynb --to slides
 mv index.slides.html index.html
 git add .
